@@ -1,20 +1,32 @@
 
 ### Performance-Analyse und Optimierung bei Single-Page-Anwendungen
 
-- Beantwortung der Frage *Why performance matters*
-- Erarbeitung/Evaluierung von Performance-Metriken
-- Möglichkeiten zur kontinuierlichen Erfassung/Kontrolle geeigneter Metriken
-- Betrachtung von Tooling
-  - Chrome Dev Tools
-    - Timeline
-   - Flamecharts
-  - WebPageTester
-  - Batarang
-- Erläuterung SPA und Angular.JS als clientseitiges MVC-Framework
-- Performance-Faktoren bei JavaScript-Anwendungen, speziell Angular.JS 1.x
-- Funktionsweise von Angular.JS und Folgen für Performance
-  - `$scope`, `$digest`, `watchers`
-  - Mutable Data Structures
+>
+  Es sollen Metriken zu Zwecken der Performance-Optimierung  clientseitiger
+  JavaScript-Anwendungen gewonnen werden. Konkret soll eine existierende,
+  umfangreiche   Anwendung untersucht und Möglichkeiten zur Performance-Messung
+  und -Optimierung erarbeitet werden. Als Ergebnisse sollen Vorschläge
+  zur Optimierung der Anwendung und Richtlinien für die weitere Entwicklung
+  vorliegen.
+
+#### Gliederungsvorschlag:
+
+1. Beantwortung der Frage *Why performance matters*
+2. Erarbeitung/Evaluierung von Performance-Metriken
+  - Möglichkeiten zur kontinuierlichen Erfassung/Kontrolle geeigneter Metriken
+  - Betrachtung von existierenden Werkzeugen
+    - Chrome Dev Tools
+      - Timeline
+      - Flamecharts
+    - WebPageTester
+    - Batarang
+3. Erläuterung SPA und Angular.JS als clientseitiges MVC-Framework
+4. Performance-Faktoren bei JavaScript-Anwendungen, speziell `Angular.JS` 1.x
+  - Funktionsweise von `Angular.JS` und Folgen für Performance
+    - `$scope`, `$digest loop`, `watchers`
+    - Mutable Data Structures
+5. Eigentliche praktische Analyse
+6. Ergebnisse und Vorschläge
 
 
   #### Link collection
