@@ -1,5 +1,5 @@
 
-### Performance-Analyse und Optimierung bei Single-Page-Anwendungen
+### Performance-Analyse und Optimierung von Single-Page-Anwendungen auf Basis von AngularJS
 
 >
   Es sollen Metriken zu Zwecken der Performance-Optimierung  clientseitiger
@@ -12,7 +12,8 @@
 #### Gliederungsvorschlag:
 
 1. Beantwortung der Frage *Why performance matters*
-2. Erarbeitung/Evaluierung von Performance-Metriken
+2. Erläuterung SPA und AngularJS als clientseitiges MVC-Framework
+3. Erarbeitung/Evaluierung von Performance-Metriken
   - Möglichkeiten zur kontinuierlichen Erfassung/Kontrolle geeigneter Metriken
   - Betrachtung von existierenden Werkzeugen
     - Chrome Dev Tools
@@ -20,7 +21,6 @@
       - Flamecharts
     - WebPageTester
     - Batarang
-3. Erläuterung SPA und Angular.JS als clientseitiges MVC-Framework
 4. Performance-Faktoren bei JavaScript-Anwendungen, speziell `Angular.JS` 1.x
   - Funktionsweise von `Angular.JS` und Folgen für Performance
     - `$scope`, `$digest loop`, `watchers`
