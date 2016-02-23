@@ -1,2 +1,12 @@
+node_modules/
+npm-debug.log
 *.pdf
 *.gdoc
+
+# latex garbage files
+*.aux
+*.out
+*.run.xml
+*.bbl
+*.blg
+*.toc

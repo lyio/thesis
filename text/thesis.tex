@@ -1,0 +1,163 @@
+\documentclass[a4paper,titlepage,DIV11,11pt,BCOR2.5cm,headinclude,ngerman,openany,pdftex]{article}
+
+\usepackage[utf8]{inputenc} %input encoding: UTF8 (with every modern LaTeX Editor UTF8 encoding should work)
+%\usepackage[latin1]{inputenc}  % under windows some editors produce source files with latin1 encoding
+
+%language options:
+\usepackage[ngerman]{babel} %use new german language for labels
+
+%quotation
+\usepackage{csquotes}
+\usepackage{dirtytalk}
+
+%tables
+\usepackage{tabu}
+
+%Images / floats:
+\usepackage[final]{graphicx} %handling of graphics
+\usepackage{rotating} %rotation of graphics / sideways figures
+\usepackage[bf]{caption} %changes style of figure / floating object captions, bold figure number
+\graphicspath{{images/}} %Bilder aus diesem Ordner laden
+
+%change font styles
+\usepackage{fourier} %fourier font
+\usepackage{sectsty} %allows to change the font of section headings
+\allsectionsfont{\fontfamily{phv}\selectfont} %select helvetica for the section headings
+
+\usepackage[left=30mm,right=25mm,top=25mm,headsep=15mm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+
+
+\usepackage{varioref} %nice references (optional references with page number)
+\usepackage{color}
+\usepackage{listings} %nice typesetting of source code listings
+\lstset{language=Ruby, frame=single, breaklines=true, numbers=left, basicstyle=\footnotesize, morekeywords={var, yield}, showspaces=false, showtabs=false, tabsize=2}
+
+%output configuration of the pdftex package / configuration of the generated pdf document:
+ \usepackage[pdftex,
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    citecolor=cyan,
+    pdftitle={Performance-Analyse und -Optimierung bei
+    Single-Page-Anwendungen auf Basis von Angular.JS},
+    pdfauthor={Thomas Fiedler},
+    pdfsubject={performance, javascript, angularjs},
+    pdfkeywords={javascript, performance, angularjs},
+    bookmarks, bookmarksnumbered=true]{hyperref}
+
+\usepackage{hyphenat}
+\hyphenation{}
+
+\definecolor{fzp}{rgb}{0.565,0.612,0.671}
+\usepackage{fancyhdr}
+\setlength{\headheight}{37.9pt}
+\pagestyle{fancy}
+\fancyhf{}
+%Kopfzeile links bzw. innen
+\fancyhead[L]{\small{Universtiät Leipzig}}
+%Kopfzeile mittig
+\fancyhead[C]{}
+%Kopfzeile rechts bzw. außen
+%\fancyhead[R]{\includegraphics{images/jira-icon.png}}
+%Linie oben
+%\renewcommand{\headrulewidth}{2pt}
+\renewcommand\headrule
+{{\color{fzp}%
+	\hrule height 3pt width \headwidth
+	\vspace{1pt}%
+	\hrule height 1pt width \headwidth
+	\vspace{-4pt}
+}}
+%Fußzeile rechts
+\fancyfoot[R]{\thepage}
+%Fußzeile Plain
+\fancypagestyle{plain}{ %
+  \fancyhf{} % remove everything
+  \renewcommand{\headrulewidth}{0pt} % remove lines as well
+  \renewcommand{\footrulewidth}{0pt}
+  \renewcommand{\headrule}{}
+  \fancyfoot[R]{\thepage}
+}
+
+\setcounter{secnumdepth}{3} %set deepness of numbered sections
+
+%Biblatex
+\usepackage[
+backend=biber,
+style=chicago-authordate,
+sorting=ynt
+]{biblatex}
+
+\addbibresource{./literatur.bib} %Imports bibliography file
+
+%new commands / macros:
+
+%------------------------------------------ DOC START ------------------------
+\begin{document}
+
+% ---TITELSEITE---
+\include{title}
+
+%manuell leere Seite erzwingen
+%\mbox{} \thispagestyle{empty} \newpage
+
+%--- TITELSEITE ENDE ---
+
+\pagenumbering{roman}
+
+% ---ZUSAMMENFASSUNG ---
+%\section*{Zusammenfassung}
+%Hier kommt die Zusammenfassung hin (wenn es eine gibt)
+
+% --- TABLE OF CONTENTS ---
+\tableofcontents
+\newpage
+% -- list of figures --
+%\listoffigures
+%\newpage
+\pagenumbering{arabic}
+%\pagestyle{headings}
+
+% ----- BEGINN HAUPTTEIL -----
+\include{1-introduction}
+\include{2-metrics}
+% ----- ANHANG -----
+\include{anhang}
+
+%% -- abkürzungen --
+%\include{masterThesisAbbrev}
+%\printglossary
+%\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+
+%%  -- index --
+%\renewcommand{\indexname}{Sachregister}
+%\printindex
+%\addcontentsline{toc}{chapter}{Sachregister}
+
+% -- list of tables --
+%\listoftables
+
+
+%% -- literaturverzeichnis --
+\printbibliography[
+heading=bibintoc,
+title={Bibliographie}
+]
+%\addcontentsline{toc}{section}{Literaturverzeichnis}
+
+% ---Erklärung---
+\section*{Erklärung}
+Ich versichere, dass ich die vorliegende Arbeit ohne fremde Hilfe
+selbstständig verfasst und nur die angegebenen Quellen und
+Hilfsmittel benutzt habe. Wörtlich oder dem Sinn nach aus anderen
+Werken entnommene Stellen sind unter Angabe der Quellen kenntlich
+gemacht. Die Arbeit wurde bisher in gleicher oder ähnlicher Form
+weder veröffentlicht, noch einer anderen Prüfungsbehörde vorgelegt.
+ \\[14cm]
+
+%TODO: hardcode the finishing date here
+\today \hspace{5.3cm} Rebecca Tomczyk
+
+\end{document}
+%----------------------------------------------------------------------------

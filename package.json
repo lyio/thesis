@@ -1,0 +1,16 @@
+{
+  "name": "thesis",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "texify text/thesis.tex --pdf --clean",
+    "watch": "node node_modules/watch/cli.js \"texify text/thesis.tex --pdf --clean\" text"
+  },
+  "author": "lyio",
+  "license": "MIT",
+  "devDependencies": {
+    "watch": "^0.17.1"
+  }
+}
